@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+</head>
+<body>
+<h1 id="data-methods-for-health-research-assignment">Data Methods for Health Research Assignment</h1>
+<h2 id="deadline-05-march-2018-1200-utc">Deadline: 05 March 2018, 12:00 UTC</h2>
+<p>You will be required to use the following datasets for this assignment.</p>
+<ol style="list-style-type: decimal">
+<li>HSCIC GP Practice Prescribing (Dec/2015): <a href="https://data.gov.uk/dataset/prescribing-by-gp-practice-presentation-level">Info</a>, <a href="https://s3.eu-west-2.amazonaws.com/dmhr-data/practices_Dec2015.csv">Practice data</a>, <a href="https://s3.eu-west-2.amazonaws.com/dmhr-data/prescribing_Dec2015.csv">Prescribing data</a></li>
+<li>HSCIC GP demographic information: <a href="https://digital.nhs.uk/catalogue/PUB30081">Info</a>, <a href="https://s3.eu-west-2.amazonaws.com/dmhr-data/gp-reg-patients-ccg.csv">Data</a></li>
+<li>ONS Postcode Lookup: <a href="https://data.gov.uk/dataset/national-statistics-postcode-lookup-uk">Info</a>, <a href="https://s3.eu-west-2.amazonaws.com/dmhr-data/postcodes.csv">Data</a></li>
+<li>English deprivation indices: <a href="https://s3.eu-west-2.amazonaws.com/dmhr-data/deprivation-by-postcode.csv">Data</a></li>
+<li>Under 75 CVD mortality rates: <a href="https://data.gov.uk/dataset/under-75-mortality-rate-from-cardiovascular-disease-nhsof-1-1">Info</a>, <a href="https://s3.eu-west-2.amazonaws.com/dmhr-data/NHSOF_1.1_I00656_D.csv">Data</a></li>
+<li>Google FluTrends: <a href="https://www.google.org/flutrends/about/">Info/Data</a></li>
+</ol>
+<h2 id="criteria-and-instructions">1. Criteria and instructions</h2>
+<h4 id="instructions">Instructions</h4>
+<ul>
+<li>Attempt <strong>all topics</strong> in this assignment and produce a detailed technical report in the form of a <strong>Jupyter notebook (.ipyn)</strong> using a combination of text, figures and tables.
+<ul>
+<li>Each student has been assigned a random city - see below.</li>
+</ul></li>
+<li>Reproducibility is a key condition for this assignment: produce extensive technical documentation for each step of your technical solution:
+<ul>
+<li>Load data directly from URLs and not local copies.</li>
+<li>Use standard modules (pandas, numpy, scikit etc) unless explicitly permitted to use something else.</li>
+<li>Do not use external APIs or other services providing aggregated information.</li>
+<li>Upload your completed Jupyter Notebook on github.</li>
+<li>Data visualisation should only make use of matplotlib.</li>
+</ul></li>
+</ul>
+<h4 id="student-allocation">Student allocation</h4>
+<pre><code>STGT7 Birmingham
+SYSD6 Leeds
+SYVM4 Sheffield
+TBBF3 Manchester
+TBBV7 Bradford
+TNZV1 Liverpool
+TSRC3 Bristol
+TTZV5 Coventry
+TXJP3 Leicester
+VCVY1 Nottingham
+VPTH7 Doncaster
+VTDD3 Brighton
+VZRT7 Bolton
+WDXC9 Plymouth
+WGKV0 Wolverhampton
+WJTH2 Southampton
+WMRY4 Luton
+XGMR1 Portsmouth
+XHGJ4 Bournemouth</code></pre>
+<h4 id="deliverables">Deliverables</h4>
+<ul>
+<li>Executed Jupyter notebook (.ipyn) file uploaded on Moodle and GitHub</li>
+<li>Executed Jupyter notebook as HTML file uploaded on Moodle and GitHub</li>
+<li>Link to GitHub repository, include in Moodle submission</li>
+</ul>
+<h2 id="topics">2. Topics</h2>
+<h3 id="assignment-a-25-marks">Assignment A [25 marks]</h3>
+<p>The NHS has been challenged to make “efficiency savings” and you have been commissioned by an NHS executive to review, document and assess GP prescribing costs. Using data from the HSCIC GP Practice Prescribing dataset <strong>for your assigned city only</strong>, address the following queries using a combination of narrative, tables, figures and descriptive statistcs:</p>
+<ol style="list-style-type: decimal">
+<li><p>Identify all GP practices and produce a table with the total number of prescriptions and their total actual cost (using the <em>ACT COST</em> column).</p></li>
+<li><p>Find the top ten most/least frequently prescribed medications across all practices. What is their total actual cost and how does that compare to the overall actual costs of each practice and of the entire city?</p></li>
+<li><p>Find the top ten most expencive medications and calculate their total actual cost.</p></li>
+<li><p>How does prescribing (frequency and costs) in your city compare when using prescribing data from Cambridge as a reference?</p></li>
+<li><p>Pandas dataframes can also be queried using SLQL! The code snippet below gives you an example of how to execute an SQL statement using <a href="https://pypi.python.org/pypi/pandasql/0.7.1">pandasql</a>. Using SQL, produce a table that provides the number of GP practices per city, ordered in descending order.</p></li>
+</ol>
+<p><strong>Code snippet to create a PandaSQL from a pandas dataframe</strong></p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">
+<span class="im">import</span> pandas <span class="im">as</span> pd
+<span class="im">from</span> pandasql <span class="im">import</span> PandaSQL
+pdsql <span class="op">=</span> PandaSQL()
+
+patients_df   <span class="op">=</span> pd.DataFrame({<span class="st">&#39;name&#39;</span>: [<span class="st">&#39;John&#39;</span>, <span class="st">&#39;Peter&#39;</span>, <span class="st">&#39;Linda&#39;</span>, <span class="st">&#39;Marie&#39;</span>],
+                                    <span class="st">&#39;age&#39;</span>:  [<span class="dv">33</span>, <span class="dv">19</span>, <span class="dv">12</span>, <span class="dv">31</span>]})
+
+<span class="bu">print</span> (pdsql(<span class="st">&quot;SELECT * FROM patients_df WHERE age &lt; 30&quot;</span>, <span class="bu">locals</span>()))
+
+    name  age
+<span class="dv">0</span>  Peter   <span class="dv">19</span>
+<span class="dv">1</span>  Linda   <span class="dv">12</span>
+</code></pre></div>
+<h3 id="assignment-b-25-marks">Assignment B [25 marks]</h3>
+<p>Using the <strong>entire dataset</strong> from the HSCIC GP Practice Prescribing data, address the following queries using a combination of narrative, tables, figures and descriptive statistics:</p>
+<ol style="list-style-type: decimal">
+<li><p>Calculate the monthly total spending for each GP-practice.</p></li>
+<li><p>Use the number of registered patients in each GP-practice to calculate the relative costs per patient.</p></li>
+<li><p>Visualize the monthly total spending per registered patients for all GP-practices in a scatterplot, show a trend line, and visualize the data for your city within the national scatterplot</p></li>
+<li><p>Visualize the relative costs per patient of all national GP-practices in a histogram.</p></li>
+<li><p>Use descriptive statistics to show how your assigned city compares to the national level.</p></li>
+</ol>
+<h3 id="assignment-c-25-marks">Assignment C [25 marks]</h3>
+<p>Using the <strong>entire dataset</strong> from the HSCIC GP Practice Prescribing data, address the following queries using a combination of narrative, tables, figures and descriptive statistcs:</p>
+<ol style="list-style-type: decimal">
+<li><p>Identify for all GP-practices the relative costs per patient for all statin prescriptions (simvastatin, atorvastatin, rosuvastatin, pravastatin, fluvastatin) by using the dataset from December 2015.</p></li>
+<li><p>Identify for all GP-practice the associated Index of Multiple Deprivation (IMD) for each GP-Practice in your assigned city.</p></li>
+<li><p>Use the entire national dataset and identify the lowest relative spenders of statins from the first decile and the highest relative spenders of statins from the last decile. Now determine for all identified GP-practices for both groups (lowest and the highest) the associated Index of Multiple Deprivation (IMD). Use these two groups to assess whether the IMD-score differs. Use descriptive statistics for your answer.</p></li>
+<li><p>Identify for all GP-practices the associated nine English regions. Identify for each region the associated 75 mortality rate for cardiovascular diseases for the year 2015.</p></li>
+<li><p>Visualize (using matplotlib) for each region spending for statins [x-axis] and the mortality rate [y-axis]. Assess whether relative spending for statin prescriptions in each regions correlates with the mortality rate from cardiovascular diseases.</p></li>
+</ol>
+<h3 id="assignment-d-25-marks">Assignment D [25 marks]</h3>
+<p>Using the Google FluTrends surveillance data, pick two random countries, one in the Northern hemisphere and one in the Southern hemisphere. For each of country:</p>
+<ol style="list-style-type: decimal">
+<li><p>Provide a visualisation of the seasonal patterns across all years.</p></li>
+<li><p>Calculate the yearly minimum and maximum for each country. Provide and plot a reasonable mathematical function that could be used as an approximation for the seasonal trend for each country.</p></li>
+</ol>
+</body>
+</html>
